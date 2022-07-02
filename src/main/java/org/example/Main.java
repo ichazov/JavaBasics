@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        //HOME ASSIGNMENT PART 1
         //Task 1
         sumOfNumbers(74,36);
 
@@ -25,6 +26,37 @@ public class Main {
         //Task 5
         int[] duplicatesArray = {5,6,7,12,-5,32,43,6,12};
         duplicateValues(duplicatesArray);
+
+        //HOME ASSIGNMENT PART 2
+        //Task 1
+        stringModification("PHP Exercises and","Python Exercises");
+
+        //Task 2
+        Computer computerOne = new Computer("Acer","16\"");
+        Computer computerTwo = new Computer("HP","18\"", 8, ComputerType.Desktop);
+        Computer computerThree = new Computer("Lenovo","18\"", 8);
+        Computer computerFour = new Computer("Asus","12\"", ComputerType.Tablet);
+
+        //Task 3
+        SomethingIsWrong somethingIsWrong = new SomethingIsWrong(40,50);
+        System.out.println(somethingIsWrong.area());
+        System.out.println("");
+
+        //Task 4
+        NumberHolder numberHolder = new NumberHolder(1, 1.5f);
+        numberHolder.showValues();
+
+        //Question 1:
+            /*1 reference to String[] students.
+            1 reference to String studentName = "Peter Parker".
+            None of the objects is eligible for garbage collection.*/
+
+        //Question 2:
+            /*It does not delete an object.*/
+
+    }
+    public static String stringModification(String a, String b) {
+        return a.concat(" " + b).replaceAll("(?i)p", "");
     }
     public static void sumOfNumbers (int a, int b) {
         System.out.println(a + b);
@@ -49,13 +81,13 @@ public class Main {
         System.out.println("");
     }
     public static void duplicateValues (int[] arr) {
-        ArrayList<Integer> cars = new ArrayList<>();
+        ArrayList<Integer> distinctNumbers = new ArrayList<>();
         int n;
         for (int j : arr) {
             n = j;
-            if (cars.contains(n)) {
+            if (distinctNumbers.contains(n)) {
                 System.out.println(n);
-            } else cars.add(n);
+            } else distinctNumbers.add(n);
         }
         System.out.println("");
     }
