@@ -53,7 +53,6 @@ public class Main {
 
         //Question 2:
             /*It does not delete an object.*/
-
     }
     public static String stringModification(String a, String b) {
         return a.concat(" " + b).replaceAll("(?i)p", "");
@@ -65,13 +64,23 @@ public class Main {
     public static void calculator (int a, int b, String operator) {
         int result = 0;
         switch (operator) {
-            case "+" -> result = a + b;
-            case "-" -> result = a - b;
-            case "*" -> result = a * b;
-            case "/" -> result = a / b;
-            case "%" -> result = a % b;
-            default -> {
-            }
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                result = a / b;
+                break;
+            case "%":
+                result = a % b;
+                break;
+            default:
+                break;
         }
         System.out.println(result);
         System.out.println("");
