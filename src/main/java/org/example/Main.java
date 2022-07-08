@@ -86,17 +86,27 @@ public class Main {
         System.out.println("");
     }
     public static void arraySum (int[] arr){
-        System.out.println(Arrays.stream(arr).sum());
+        int sum = 0;
+        for (int k:
+             arr) {
+            sum = sum + k;
+        }
+        System.out.println(sum);
         System.out.println("");
     }
     public static void duplicateValues (int[] arr) {
-        ArrayList<Integer> distinctNumbers = new ArrayList<>();
-        int n;
-        for (int j : arr) {
-            n = j;
-            if (distinctNumbers.contains(n)) {
-                System.out.println(n);
-            } else distinctNumbers.add(n);
+        int k;
+        int m = 0;
+
+        for (int j:
+                arr) {
+            m++;
+            for (int i = m; i < arr.length; i++) {
+                k = arr[i];
+                if (k == j) {
+                    System.out.println(k);
+                }
+            }
         }
         System.out.println("");
     }
